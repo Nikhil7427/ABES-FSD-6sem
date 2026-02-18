@@ -1,15 +1,15 @@
 [
   {
     "id": 1,
-    "first_name": "Milka",
-    "last_name": "Feye",
+    "first_name": "ABC",
+    "last_name": "XYZ",
     "email": "mfeye0@mashable.com",
     "gender": "Polygender"
   },
   {
     "id": 2,
-    "first_name": "Domenico",
-    "last_name": "Pimmocke",
+    "first_name": "EFG",
+    "last_name": "XYZ",
     "email": "dpimmocke1@geocities.jp",
     "gender": "Male"
   },
@@ -78,13 +78,6 @@
   },
   {
     "id": 11,
-    "first_name": "Milka",
-    "last_name": "Feye",
-    "email": "mfeye0@mashable.com",
-    "gender": "Polygender"
-  },
-  {
-    "id": 13,
     "first_name": "Milka",
     "last_name": "Feye",
     "email": "mfeye0@mashable.com",
