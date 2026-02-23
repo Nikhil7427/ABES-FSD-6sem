@@ -1,5 +1,13 @@
-import { readFile, writeFile } from "../Utils/readFile.js";
-const FILE = "../users.json";
+import { readFile } from "../Utils/readFile.js";
+import { writeFile } from "../Utils/writeFile.js";
+const FILE = "../user.json";
+
+const register = async (users, userDetails) => {
+    const updatedUser = [...users, userDetails];
+    const response = await writeFile(FILE, updatedUser);
+    console.log(response.message);
+    return;
+}
 const userRegistration = async (userDetails) => {
     const { name, email, password, gender } = userDetails;
     if (!name || !email || !password || !gender) {
@@ -8,13 +16,18 @@ const userRegistration = async (userDetails) => {
     }
     const users = await readFile(FILE);
     if (users.length === 0) {
-        // register
+        register(users, userDetails);
     }
-    const existingUser = users.find((u)=>u.email===email);
-    if(existingUser){
+    const existingUser = users.find((u) => u.email === email);
+    if (existingUser) {
         console.log("Already Registered");
         return;
     }
-    // register
-
+    register(users, userDetails);
 }
+userRegistration({
+    "name": "Edik Goaks",
+    "email": "egoaksdf2@bbb.org",
+    "password": "oPsf7*P?U@E",
+    "gender": "Male"
+})
